@@ -1,0 +1,19 @@
+section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+}
+section > input {
+    height: fit-content;
+    border: 1px solid;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}

@@ -1,0 +1,30 @@
+.container {
+    height: 11rem;
+    width: 13rem;
+    position: absolute;
+    left: 1rem;
+    overflow-x: hidden;
+    padding: 0 2rem 0 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.container:hover {
+    overflow-x: auto;
+}
+
+.name {
+    font-size: var(--subtitle);
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+.info {
+    font-size: var(--smallest);
+    text-align: justify;
+}

@@ -1,0 +1,14 @@
+.background_container {
+    height: 35rem;
+}
+.header_container {
+    margin-top: 0rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.info_container {
+    margin-top: 8rem;
+}
