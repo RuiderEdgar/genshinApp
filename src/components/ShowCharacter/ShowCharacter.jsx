@@ -3,6 +3,7 @@ import axios from "axios"
 import Logo from "../Logo/Logo"
 import SearchBar from "../SearchBar/SearchBar"
 import Description from "../Description/Description"
+import Stars from "../Stars/Stars"
 import { GenshinAPI } from "../../api/genshin"
 import { BASE_URL } from "../../config"
 import styles from './ShowCharacter.module.css'
@@ -74,6 +75,7 @@ const ShowCharacter = ({characters}) => {
             </section>
             <section className={styles.info_container}>
                 <Description name={characterInfo?.name} information={characterInfo?.description}/>
+                <Stars rarity={characterInfo?.rarity}/>
                 <aside></aside>
             </section>
             <footer></footer>
