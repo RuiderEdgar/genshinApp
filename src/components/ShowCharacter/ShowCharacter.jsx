@@ -4,6 +4,9 @@ import Logo from "../Logo/Logo"
 import SearchBar from "../SearchBar/SearchBar"
 import Description from "../Description/Description"
 import Stars from "../Stars/Stars"
+import Birthday from "../Birthday/Birthday"
+import Weapon from "../Weapon/Weapon"
+import Nation from "../Nation/Nation"
 import { GenshinAPI } from "../../api/genshin"
 import { BASE_URL } from "../../config"
 import styles from './ShowCharacter.module.css'
@@ -27,10 +30,10 @@ const ShowCharacter = ({characters}) => {
             );
             setImageLink(`${BASE_URL}characters/${getCharacter}/gacha-splash`);
         }catch(error){
-            console.log(error)
+            console.warn(error.message)
             if (error.response.status === 404) {
-                console.log(
-                    "This character doesn't have gacha-splash, we use the card");
+                console.warn(
+                    "This character doesn't have gacha-splash image, we'll use the card image instead");
                     setImageLink(
                         `${BASE_URL}characters/${getCharacter}/card`
                     );
@@ -58,7 +61,6 @@ const ShowCharacter = ({characters}) => {
         }
     }, [getCharacter])
     
-    console.log(characterInfo)
     return (
         <main
             className={styles.background_container}
@@ -76,7 +78,9 @@ const ShowCharacter = ({characters}) => {
             <section className={styles.info_container}>
                 <Description name={characterInfo?.name} information={characterInfo?.description}/>
                 <Stars rarity={characterInfo?.rarity}/>
-                <aside></aside>
+                <Birthday birthday={characterInfo?.birthday}/>
+                <Weapon weapon={characterInfo?.weapon}/>
+                <Nation nation={characterInfo?.nation}/>
             </section>
             <footer></footer>
         </main>

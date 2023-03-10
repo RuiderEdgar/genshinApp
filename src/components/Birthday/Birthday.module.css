@@ -1,0 +1,23 @@
+.container {
+    position: absolute;
+    right: 1rem;
+    padding: 0.5rem 1rem 0;
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.title {
+    font-size: var(--subtitle);
+    font-weight: bold;
+}
+.birthday {
+    font-size: var(--body-text);
+    /* font-weight: bold; */
+}

@@ -1,0 +1,9 @@
+.container {
+    position: absolute;
+    margin-top: 42rem;
+}
+.title {
+    font-size: var(--title);
+    font-weight: bold;
+    color: white;
+}

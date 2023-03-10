@@ -1,0 +1,15 @@
+.container {
+    position: absolute;
+    right: 1rem;
+    margin-top: 25rem;
+}
+.image {
+    width: 10rem;
+}
+.title {
+    font-size: var(--subtitle);
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    margin-top: 1rem;
+}
