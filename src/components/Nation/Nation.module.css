@@ -1,6 +1,8 @@
 .container {
     position: absolute;
-    margin-top: 42rem;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 32rem;
 }
 .title {
     font-size: var(--title);

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import ShowCharacter from './components/ShowCharacter/ShowCharacter'
+import ListCharacters from './components/ListCharacters/ListCharacters'
 import { GenshinAPI } from './api/genshin'
 import styles from './App.module.css'
 //Orden
@@ -26,10 +27,11 @@ function App() {
   }, [])
   
   return (
-    <div className="App">
-      <ShowCharacter characters={characters}/>
-    </div>
-  )
+      <div className={styles.app}>
+          <ShowCharacter characters={characters} />
+          <ListCharacters characters={characters} />
+      </div>
+  );
 }
 
 export default App

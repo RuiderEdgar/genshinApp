@@ -1,4 +1,4 @@
-section {
+.search_container {
     display: flex;
     flex-direction: row;
     margin-top: 0.2rem;
@@ -6,7 +6,7 @@ section {
     align-items: center;
     height: 1.5rem;
 }
-section > input {
+.input {
     height: fit-content;
     border: 1px solid;
     margin-right: 0.5rem;
