@@ -19,5 +19,6 @@
 }
 .birthday {
     font-size: var(--body-text);
-    /* font-weight: bold; */
+    font-weight: bold;
+    text-align: right;
 }

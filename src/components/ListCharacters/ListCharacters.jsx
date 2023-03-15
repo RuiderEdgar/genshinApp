@@ -16,7 +16,7 @@ const ListCharacters = ({ characters }) => {
             <h2 className={styles.title}>Characters</h2>
             <main className={styles.characterList_container}>
                 {
-                    characters.map((character) => <CharacterCard key={character} info={fetchCharacterInfo(character)}/>
+                    characters.map((character) => <CharacterCard key={character} character={character} info={fetchCharacterInfo(character)}/>
                     )
                 }
             </main>
