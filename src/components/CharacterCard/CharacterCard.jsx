@@ -6,7 +6,7 @@ import Polearm from "../../assets/images/Polearm.webp";
 import Sword from "../../assets/images/Sword.webp";
 import styles from './CharacterCard.module.css'
 
-const CharacterCard = ({ info, character }) => {
+const CharacterCard = ({ info, character, onHandle }) => {
     const [characterInfo, setCharacterInfo] = useState();
     const [image, setImage] = useState();
 
@@ -27,6 +27,10 @@ const CharacterCard = ({ info, character }) => {
 
     const index = arrayWeapons.indexOf(characterInfo?.weapon);
 
+    const handleClick = () => {
+        onHandle(character);
+    }
+
     useEffect(() => {
         if (characterInfo?.weapon) {
             setImage(weaponImage[index]);
@@ -42,7 +46,7 @@ const CharacterCard = ({ info, character }) => {
     }
 
     return (
-        <div className={styles.card_container}>
+        <div className={styles.card_container} onClick={handleClick}>
             <header className={styles.header}>{characterInfo.name}</header>
             <main className={styles.main}>
                 <img
@@ -53,7 +57,7 @@ const CharacterCard = ({ info, character }) => {
             </main>
             <footer className={styles.footer}>
                 <aside>
-                    <img className={styles.imageWeapon}
+                    <img className={styles.imageElement}
                         src={`https://api.genshin.dev/elements/${characterInfo.vision.toLowerCase()}/icon`}
                         alt="element icon"
                     />

@@ -14,6 +14,7 @@ import styles from './App.module.css'
 
 function App() {
   const [characters, setCharacters] = useState([])
+  const [selectCharacter, setSelectCharacter] = useState(null)
 
   async function fetchCharacters(){
     const characterResponse = await GenshinAPI.fetchListCharacters();
@@ -22,14 +23,26 @@ function App() {
     }
   }
   
+  const handleCharacterClick = (character) => {
+    setSelectCharacter(character)
+    window.scrollTo(0, 0)
+  }
+
   useEffect(() => {
     fetchCharacters()
   }, [])
   
   return (
       <div className={styles.app}>
-          <ShowCharacter characters={characters} />
-          <ListCharacters characters={characters} />
+          <ShowCharacter
+              characters={characters}
+              selectCharacter={selectCharacter}
+              onSubmit={handleCharacterClick}
+          />
+          <ListCharacters
+              characters={characters}
+              onHandle={handleCharacterClick}
+          />
       </div>
   );
 }

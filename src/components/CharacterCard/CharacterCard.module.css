@@ -33,7 +33,9 @@
 }
 .footer {
     background: linear-gradient(0deg, #e6d70c 50%, rgba(27, 127, 31, 3) 100%);
-    height: 4rem;
+    /* min-height: 4rem; */
+    /* max-height: 100%; */
+    height: 100%;
     display: flex;
     padding: 0 0.1rem;
     font-size: var(--details);
@@ -42,9 +44,14 @@
 }
 .imageWeapon {
     width: 4rem;
-    height: 100%;
+    height: 4rem;
+}
+.imageElement {
+    width: 3rem;
+    height: 3rem;
 }
 .nation {
     font-weight: bold;
     margin: 0;
+    text-align: center;
 }
