@@ -17,7 +17,7 @@ const SearchBar = ({ characters, onSubmit }) => {
     return (
         <section className={styles.search_container}>
             <input type="text" className={styles.input} onKeyUp={submit} placeholder="Search a character"/>
-            <Search size={19} />
+            <Search className={styles.icon_search} />
         </section>
     );
 };

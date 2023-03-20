@@ -3,3 +3,40 @@
     right: 1rem;
     top: 9rem;
 }
+.stars_size {
+    font-size: 20px;
+}
+/*------------Responsive------------------*/
+@media (min-width: 576px) and (max-width: 767px) {
+    .container_stars {
+        top: 10rem;
+    }
+    .stars_size {
+        font-size: 22px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .container_stars {
+        top: 10rem;
+    }
+    .stars_size {
+        font-size: 26px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container_stars {
+        top: 12rem;
+    }
+    .stars_size {
+        font-size: 30px;
+    }
+}
+@media (min-width: 1200px) {
+    .container_stars {
+        top: 14rem;
+        right: 8rem;
+    }
+    .stars_size {
+        font-size: 34px;
+    }
+}

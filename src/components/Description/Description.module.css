@@ -6,7 +6,7 @@
     top: 9rem;
     overflow-x: hidden;
     padding: 0 2rem 0 1rem;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.26);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
@@ -28,4 +28,39 @@
 .info {
     font-size: var(--smallest);
     text-align: justify;
+}
+
+/*------------Responsive------------------*/
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        min-height: fit-content;
+        height: 18rem;
+        width: 18rem;
+        top: 10rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        min-height: fit-content;
+        height: 30rem;
+        width: 20rem;
+        top: 12rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        min-height: fit-content;
+        height: 30rem;
+        width: 20rem;
+        top: 12rem;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        min-height: fit-content;
+        height: 20rem;
+        width: 30rem;
+        top: 14rem;
+        left: 8rem;
+    }
 }

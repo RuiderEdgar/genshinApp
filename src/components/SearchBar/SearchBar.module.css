@@ -23,9 +23,36 @@
 
 input::placeholder {
     color: rgb(107, 107, 107);
+    text-align: center;
 }
 
 input:focus {
     outline-width: 0;
     border: solid 1px white;
+}
+
+.icon_search {
+    font-size: 19px;
+}
+
+/*------------Responsive------------------*/
+@media (min-width: 576px) and (max-width: 767px) {
+    .icon_search {
+        font-size: 20px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .icon_search {
+        font-size: 25px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .icon_search {
+        font-size: 25px;
+    }
+}
+@media (min-width: 1200px) {
+    .icon_search {
+        font-size: 26px;
+    }
 }

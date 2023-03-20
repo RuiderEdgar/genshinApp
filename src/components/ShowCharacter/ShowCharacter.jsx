@@ -15,7 +15,6 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
     const [getCharacter, setGetCharacter] = useState();
     const [imageLink, setImageLink] = useState();
     const [characterInfo, setCharacterInfo] = useState();
-    console.log(selectCharacter);
 
     //Para hacer aparecer cualquier personaje por defecto al principio y no solo uno en especifico
     //*Normal version
@@ -122,6 +121,14 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
         }
     }, [getCharacter]);
 
+    if (!characterInfo) {
+        return (
+            <div className={styles.loader_container}>
+                <div className={styles.loader}></div>
+            </div>
+        );
+    }
+
     return (
         <main
             className={styles.background_container}
@@ -136,7 +143,7 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
                 <Logo />
                 <SearchBar characters={characters} onSubmit={onSubmit} />
             </section>
-            <section className={styles.info_container}>
+            <section >
                 <Description
                     name={characterInfo?.name}
                     information={characterInfo?.description}
@@ -144,9 +151,10 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
                 <Stars rarity={characterInfo?.rarity} />
                 <Birthday birthday={characterInfo?.birthday} />
                 <Weapon weapon={characterInfo?.weapon} />
-                <Nation nation={characterInfo?.nation} />
             </section>
-            <footer></footer>
+            <footer>
+                <Nation nation={characterInfo?.nation} />
+            </footer>
         </main>
     );
 };

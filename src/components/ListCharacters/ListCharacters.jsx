@@ -4,9 +4,7 @@ import styles from "./ListCharacters.module.css";
 
 const ListCharacters = ({ characters, onHandle }) => {
     async function fetchCharacterInfo(character) {
-        const characterInfoResponse = await GenshinAPI.fetchCharacterInfo(
-            character
-        );
+        const characterInfoResponse = await GenshinAPI.fetchCharacterInfo(character)
         if (characterInfoResponse) {
             return characterInfoResponse;
         }
