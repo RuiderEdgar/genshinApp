@@ -17,16 +17,6 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
     const [characterInfo, setCharacterInfo] = useState();
 
     //Para hacer aparecer cualquier personaje por defecto al principio y no solo uno en especifico
-    //*Normal version
-    // const getRandomCharacter = () => {
-    //     if (selectCharacter === null) {
-    //         const randomNumber = Math.floor(Math.random() * characters.length);
-    //         setGetCharacter(characters[randomNumber]);
-    //     } else {
-    //         setGetCharacter(selectCharacter);
-    //     }
-    // };
-
     //*useCallback version
     //Este useCallback dependerá de dos props, ya que se ejecutará en funcion de si cambia el array de characters o si cambia el personaje seleccionado selectCharacter
     const getRandomCharacter = useCallback(() => {
@@ -39,25 +29,6 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
     }, [characters, selectCharacter]);
 
     //No todos los personajes tienen este tipo de imagen, por lo tanto se verifica y si no lo tiene, se usa otro tipo de imagen que todos tienen
-
-    //*Normal version
-    // async function verifyCharacterImage() {
-    //     try {
-    //         await axios.get(
-    //             `${BASE_URL}characters/${getCharacter}/gacha-splash`
-    //         );
-    //         setImageLink(`${BASE_URL}characters/${getCharacter}/gacha-splash`);
-    //     } catch (error) {
-    //         console.warn(error.message);
-    //         if (error.response.status === 404) {
-    //             console.warn(
-    //                 "This character doesn't have gacha-splash image, we'll use the card image instead"
-    //             );
-    //             setImageLink(`${BASE_URL}characters/${getCharacter}/card`);
-    //         }
-    //     }
-    // }
-
     //*useCallback version
     const verifyCharacterImage = useCallback(async () => {
         try {
@@ -75,26 +46,6 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
             }
         }
     }, [getCharacter]);
-
-    //*Normal version
-    // async function fetchCharacterInfo() {
-    //     const characterInfoResponse = await GenshinAPI.fetchCharacterInfo(
-    //         getCharacter
-    //     );
-    //     if (characterInfoResponse) {
-    //         setCharacterInfo(characterInfoResponse);
-    //     }
-    // }
-
-    //*useCallback version
-    // const fetchCharacterInfo = useCallback(async () => {
-    //     const characterInfoResponse = await GenshinAPI.fetchCharacterInfo(
-    //         getCharacter
-    //     );
-    //     if (characterInfoResponse) {
-    //         setCharacterInfo(characterInfoResponse);
-    //     }
-    // }, [getCharacter]);
 
     //*useMemo version
     const fetchCharacterInfo = useMemo(() => {
