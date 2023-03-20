@@ -28,6 +28,11 @@
 .main {
     min-height: 17rem;
     max-height: 20.5rem;
+    width: 100%;
+}
+/* El importan aqui ya que es para poder manejar el estilo del LazyLoadImage */
+.main span {
+    display: initial !important;
 }
 .image {
     width: 100%;
