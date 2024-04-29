@@ -1,44 +1,48 @@
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 :root {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 
-    /* Variables */
+  /* Variables */
 
-    /*font size for html = fontsize 62.5%*/
-    --smallest: 1.2rem;
-    --details: 1.3rem;
-    /*up to 1.4 or 14px*/
-    --body-text: 1.6rem;
-    /*up to 1.8 or 18px*/
-    --subtitle: 1.8rem;
-    /*up to 2.0*/
-    --title: 2.4rem;
-    /*up to 2.8*/
-    --header: 3.2rem;
-    /*up to 3.8*/
+  /*font size for html = fontsize 62.5%*/
+  --smallest: 1.2rem;
+  --details: 1.3rem;
+  /*up to 1.4 or 14px*/
+  --body-text: 1.6rem;
+  /*up to 1.8 or 18px*/
+  --subtitle: 1.8rem;
+  /*up to 2.0*/
+  --title: 2.4rem;
+  /*up to 2.8*/
+  --header: 3.2rem;
+  /*up to 3.8*/
 
-    /* Colors */
-    --box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.473);
-    --white: #e4e4e4;
-    --black: #1b1b1b;
+  /* Colors */
+  --box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.473);
+  --white: #e4e4e4;
+  --black: #1b1b1b;
 }
 
 @media (min-width: 768px) {
-    :root {
-        --smallest: 1.6rem;
-        --details: 1.6rem;
-        /*up to 1.8 or 18px*/
-        --body-text: 2rem;
-        /*up to 2.1 or 21px*/
-        --subtitle: 2.1rem;
-        /*up to 2.4*/
-        --title: 3.4rem;
-        /*up to 3.8*/
-        --header: 4rem;
-        /*up to 4.8*/
-    }
+  :root {
+    --smallest: 1.6rem;
+    --details: 1.6rem;
+    /*up to 1.8 or 18px*/
+    --body-text: 2rem;
+    /*up to 2.1 or 21px*/
+    --subtitle: 2.1rem;
+    /*up to 2.4*/
+    --title: 3.4rem;
+    /*up to 3.8*/
+    --header: 4rem;
+    /*up to 4.8*/
+  }
+}
+
+body {
+  margin: 0;
 }
