@@ -5,6 +5,7 @@ import Catalyst from "../../assets/images/Catalyst.webp";
 import Claymore from "../../assets/images/Claymore.webp";
 import Polearm from "../../assets/images/Polearm.webp";
 import Sword from "../../assets/images/Sword.webp";
+import { BASE_URL } from "../../config";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import "react-lazy-load-image-component/src/effects/black-and-white.css";
 import styles from './CharacterCard.module.css'
@@ -54,38 +55,38 @@ const CharacterCard = ({ info, character, onHandle }) => {
     }
 
     return (
-        <div className={styles.card_container} onClick={handleClick}>
-            <header className={styles.header}>{characterInfo.name}</header>
-            <main className={styles.main}>
-                <LazyLoadImage
-                    className={styles.image}
-                    alt={`${character} card image`}
-                    src={`https://api.genshin.dev/characters/${character}/card`}
-                    effect="blur"
-                />
-            </main>
-            <footer className={styles.footer}>
-                <aside>
-                    <LazyLoadImage
-                        className={styles.imageElement}
-                        src={`https://api.genshin.dev/elements/${characterInfo.vision.toLowerCase()}/icon`}
-                        alt={`${characterInfo.vision} element icon`}
-                        effect="black-and-white"
-                    />
-                </aside>
-                <aside>
-                    <p className={styles.nation}>{characterInfo.nation}</p>
-                </aside>
-                <aside>
-                    <LazyLoadImage
-                        className={styles.imageWeapon}
-                        src={weaponImage}
-                        alt={`${characterInfo.weapon} weapon`}
-                        effect="black-and-white"
-                    />
-                </aside>
-            </footer>
-        </div>
+      <div className={styles.card_container} onClick={handleClick}>
+        <header className={styles.header}>{characterInfo.name}</header>
+        <main className={styles.main}>
+          <LazyLoadImage
+            className={styles.image}
+            alt={`${character} card image`}
+            src={`${BASE_URL}characters/${character}/card`}
+            effect="blur"
+          />
+        </main>
+        <footer className={styles.footer}>
+          <aside>
+            <LazyLoadImage
+              className={styles.imageElement}
+              src={`${BASE_URL}elements/${characterInfo.vision.toLowerCase()}/icon`}
+              alt={`${characterInfo.vision} element icon`}
+              effect="black-and-white"
+            />
+          </aside>
+          <aside>
+            <p className={styles.nation}>{characterInfo.nation}</p>
+          </aside>
+          <aside>
+            <LazyLoadImage
+              className={styles.imageWeapon}
+              src={weaponImage}
+              alt={`${characterInfo.weapon} weapon`}
+              effect="black-and-white"
+            />
+          </aside>
+        </footer>
+      </div>
     );
 };
 

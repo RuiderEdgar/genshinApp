@@ -1,3 +1,3 @@
-const BASE_URL = "https://api.genshin.dev/";
+const BASE_URL = "https://genshin.jmp.blue/";
 
 export {BASE_URL}

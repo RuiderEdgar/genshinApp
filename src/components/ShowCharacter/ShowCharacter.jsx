@@ -90,11 +90,11 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
                     : "black",
             }}
         >
-            <section className={styles.header_container}>
+            <section className={styles.header_container} alt='Name of the page and search bar'>
                 <Logo />
                 <SearchBar characters={characters} onSubmit={onSubmit} />
             </section>
-            <section >
+            <section alt='character information'>
                 <Description
                     name={characterInfo?.name}
                     information={characterInfo?.description}
