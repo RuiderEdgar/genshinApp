@@ -33,7 +33,7 @@ function App() {
   }, [])
   
   return (
-      <div className={styles.app}>
+      <main className={styles.app}>
           <ShowCharacter
               characters={characters}
               selectCharacter={selectCharacter}
@@ -43,7 +43,7 @@ function App() {
               characters={characters}
               onHandle={handleCharacterClick}
           />
-      </div>
+      </main>
   );
 }
 

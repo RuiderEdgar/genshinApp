@@ -28,7 +28,7 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
         }
     }, [characters, selectCharacter]);
 
-    //No todos los personajes tienen este tipo de imagen, por lo tanto se verifica y si no lo tiene, se usa otro tipo de imagen que todos tienen
+    //No todos los personajes tienen la imagen tipo splash art, por lo tanto se verifica y si no lo tiene, se usa el tipo de imagen card que todos tienen
     //*useCallback version
     const verifyCharacterImage = useCallback(async () => {
         try {
@@ -90,10 +90,10 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
                     : "black",
             }}
         >
-            <section className={styles.header_container} alt='Name of the page and search bar'>
+            <header className={styles.header_container} alt='Name of the page and search bar'>
                 <Logo />
                 <SearchBar characters={characters} onSubmit={onSubmit} />
-            </section>
+            </header>
             <section alt='character information'>
                 <Description
                     name={characterInfo?.name}
