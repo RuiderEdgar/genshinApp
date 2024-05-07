@@ -1,8 +1,8 @@
 import styles from './Nation.module.css'
 const Nation = ({nation}) => (
-    <footer className={styles.container}>
+    <section className={styles.container}>
         <h1 className={styles.title}>{nation}</h1>
-    </footer>
+    </section>
 )
 
 export default Nation
