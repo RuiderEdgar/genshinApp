@@ -1,47 +1,49 @@
+/* //*Ajustando la altura a la misma del aside information */
 .container {
-    position: absolute;
-    right: 1rem;
-    padding: 0.5rem 1rem 0;
-    top: 12rem;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+  position: absolute;
+  right: 1rem;
+  padding: 0.5rem 1rem 0;
+  top: 9rem;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 .title {
-    font-size: var(--subtitle);
-    font-weight: bold;
+  font-size: var(--subtitle);
+  font-weight: bold;
+  margin: 0;
 }
 .birthday {
-    font-size: var(--body-text);
-    font-weight: bold;
-    text-align: right;
+  font-size: var(--body-text);
+  font-weight: bold;
+  text-align: right;
 }
 
 /*------------Responsive------------------*/
 @media (min-width: 576px) and (max-width: 767px) {
-    .container {
-        top: 13rem;
-    }
+  .container {
+    top: 10rem;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    .container {
-        top: 14rem;
-    }
+  .container {
+    top: 12rem;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-    .container {
-        top: 16rem;
-    }
+  .container {
+    top: 12rem;
+  }
 }
 @media (min-width: 1200px) {
-    .container {
-        top: 19rem;
-        right: 8rem;
-    }
+  .container {
+    top: 14rem;
+    right: 8rem;
+  }
 }

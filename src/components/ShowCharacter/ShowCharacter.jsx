@@ -101,12 +101,17 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
               : "black",
           }}
         >
-        {/* //*Recolocando los componentes de la informacion del personaje* */}
-          <section className={styles.character_container} alt="character information">
-            <section alt='character information'>
-                <Description
-                    name={characterInfo?.name}
-                    information={characterInfo?.description}/>
+          {/* //*Recolocando los componentes de la informacion del personaje* */}
+          <section
+            className={styles.character_container}
+            alt="character information"
+          >
+            <section alt="character information">
+              <Description
+                name={characterInfo?.name}
+                information={characterInfo?.description}
+              />
+              <Birthday birthday={characterInfo?.birthday} />
             </section>
             <footer>
               <Nation nation={characterInfo?.nation} />
