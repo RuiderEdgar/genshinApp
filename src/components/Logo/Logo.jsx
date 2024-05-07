@@ -8,9 +8,9 @@ import styles from './Logo.module.css'
 // );
 
 const Logo = () => (
-    <header>
+    <section>
         <Title>Genshin App</Title>
-    </header>
+    </section>
 );
 
 

@@ -15,10 +15,15 @@ const SearchBar = ({ characters, onSubmit }) => {
     };
 
     return (
-        <section className={styles.search_container}>
-            <input type="text" className={styles.input} onKeyUp={submit} placeholder="Search a character"/>
-            <Search className={styles.icon_search} />
-        </section>
+      <section className={styles.search_container}>
+        <input
+          type="text"
+          className={styles.input}
+          onKeyUp={submit}
+          placeholder="Search a character"
+        />
+        <Search className={styles.icon_search} />
+      </section>
     );
 };
 
