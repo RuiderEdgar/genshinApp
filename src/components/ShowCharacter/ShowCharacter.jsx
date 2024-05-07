@@ -112,6 +112,7 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
                 information={characterInfo?.description}
               />
               <Birthday birthday={characterInfo?.birthday} />
+              <Weapon weapon={characterInfo?.weapon} />
             </section>
             <footer>
               <Nation nation={characterInfo?.nation} />
@@ -120,32 +121,6 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
           </section>
         </section>
       </>
-      // <main
-      //     className={styles.background_container}
-      //     style={{
-      //         background: getCharacter
-      //             ? `linear-gradient(0deg, #000 0.65%, rgba(27, 127, 131, 0) 100%),
-      //             url('${imageLink}') no-repeat center / cover`
-      //             : "black",
-      //     }}
-      // >
-      //     <header className={styles.header_container} alt='Name of the page and search bar'>
-      //         <Logo />
-      //         <SearchBar characters={characters} onSubmit={onSubmit} />
-      //     </header>
-      //     <section alt='character information'>
-      //         <Description
-      //             name={characterInfo?.name}
-      //             information={characterInfo?.description}
-      //         />
-      //         <Stars rarity={characterInfo?.rarity} />
-      //         <Birthday birthday={characterInfo?.birthday} />
-      //         <Weapon weapon={characterInfo?.weapon} />
-      //     </section>
-      //     <footer>
-      //         <Nation nation={characterInfo?.nation} />
-      //     </footer>
-      // </main>
     );
 };
 

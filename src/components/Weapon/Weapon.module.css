@@ -1,50 +1,51 @@
+/* //*Ajustando el tamaño de la imagen del arma */
 .container {
-    position: absolute;
-    right: 1rem;
-    top: 20rem;
+  position: absolute;
+  right: 1rem;
+  top: 20rem;
 }
 .image {
-    width: 10rem;
+  width: 9rem;
 }
 .title {
-    font-size: var(--subtitle);
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    margin-top: 1rem;
+  font-size: var(--subtitle);
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin-top: 1rem;
 }
 
 /*------------Responsive------------------*/
 @media (min-width: 576px) and (max-width: 767px) {
-    .container {
-        top: 25rem;
-    }
-    .image {
-        width: 11rem;
-    }
+  .container {
+    top: 25rem;
+  }
+  .image {
+    width: 11rem;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    .container {
-        top: 36rem;
-    }
-    .image {
-        width: 14rem;
-    }
+  .container {
+    top: 36rem;
+  }
+  .image {
+    width: 14rem;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-    .container {
-        top: 34rem;
-    }
-    .image {
-        width: 16rem;
-    }
+  .container {
+    top: 34rem;
+  }
+  .image {
+    width: 16rem;
+  }
 }
 @media (min-width: 1200px) {
-    .container {
-        top: 36rem;
-        right: 8rem;
-    }
-    .image {
-        width: 16rem;
-    }
+  .container {
+    top: 36rem;
+    right: 8rem;
+  }
+  .image {
+    width: 16rem;
+  }
 }
