@@ -82,12 +82,26 @@ const ShowCharacter = ({ characters, selectCharacter, onSubmit }) => {
 
     return (
     <>
+        {/* //*Cambiando el orden colocando primero un header que contiene el logo y la barra de busqueda */}
         <header 
         className={styles.header_container} 
         alt="Name of the page and search bar">
             <Logo />
             <SearchBar characters={characters} onSubmit={onSubmit} />
         </header>
+
+        {/* //*Posteriormente, debajo del encabezado colocamos la imagen del personaje, con su informacion */}
+        <section 
+        className={styles.background_container}
+        style={{
+            background: getCharacter
+            ? `linear-gradient(0deg, #000 0.65%, rgba(27, 127, 131, 0) 100%),
+            url('${imageLink}') no-repeat center top / cover`
+            : "black",
+
+        }}>
+        
+        </section>
     </>
       // <main
       //     className={styles.background_container}

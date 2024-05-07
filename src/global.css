@@ -1,5 +1,9 @@
 html {
   font-size: 62.5%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: var(--white);
 }
 :root {
   padding: 0;
@@ -45,4 +49,6 @@ html {
 
 body {
   margin: 0;
+  min-width: 32rem;
+  max-width: 192rem;
 }
