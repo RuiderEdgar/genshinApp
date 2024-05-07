@@ -1,6 +1,8 @@
 .container {
-  height: 11rem;
-  width: 13rem;
+  height: fit-content;
+  max-height: 11rem;
+  width: fit-content;
+  max-width: 13rem;
   position: absolute;
   left: 1rem;
   top: 9rem;
